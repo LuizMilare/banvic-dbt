@@ -7,6 +7,7 @@
     Try changing "table" to "view" below
 */
 
+-- Comentario
 {{ config(materialized='table') }}
 
 with source_data as (
