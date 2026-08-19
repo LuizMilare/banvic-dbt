@@ -1,7 +1,7 @@
 with
-    agencias as (
+    colaboradores as (
         select *
-        from {{ ref('stg_erp_agencias') }}
+        from {{ ref('stg_erp_colaboradores') }}
     )
 
     , localidades as (
@@ -9,19 +9,21 @@ with
         from {{ ref('stg_erp_localidades') }}
     )
 
-    , agencias_enriquecido as (
+    , colaboradores_enriquecido as (
         select
-            agencias.pk_agencia
-            , agencias.nome_agencia
-            , agencias.endereco_agencia
-            , agencias.data_abertura_agencia
-            , agencias.tipo_agencia
-            , localidades.cidade as cidade_agencia
-            , localidades.uf as uf_agencia
+            colaboradores.pk_colaborador
+            , colaboradores.nome_colaborador
+            , colaboradores.email_colaborador
+            , colaboradores.cpf_colaborador
+            , colaboradores.data_nascimento_colaborador
+            , colaboradores.endereco_colaborador
+            , colaboradores.cep_colaborador
+            , localidades.cidade as cidade_colaborador
+            , localidades.uf as uf_colaborador
         from
-        agencias
-        left join localidades on agencias.fk_localidade = localidades.pk_localidade
+        colaboradores
+        left join localidades on colaboradores.fk_localidade = localidades.pk_localidade
     )
 
 select *
-from agencias_enriquecido
+from colaboradores_enriquecido
