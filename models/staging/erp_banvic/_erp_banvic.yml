@@ -1,0 +1,10 @@
+
+sources:
+  - name: erp
+    description: Simulação de sistema ERP da BanVic
+    schema: erp_banvic
+    tables:
+      - name: localidades
+        description: Tabela fonte de localidades. Cidade | Estado
+      - name: clientes
+        description: Tabela fonte de clientes com informações pessoais
