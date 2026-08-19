@@ -8,3 +8,8 @@ sources:
         description: Tabela fonte de localidades. Cidade | Estado
       - name: clientes
         description: Tabela fonte de clientes com informações pessoais
+      - name: agencias
+        description: Tabela fonte de agencias
+      - name: colaboradores
+        description: Tabela fonte de colaboradores com informações pessoais
+        
