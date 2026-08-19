@@ -6,10 +6,33 @@ sources:
     tables:
       - name: localidades
         description: Tabela fonte de localidades. Cidade | Estado
+        columns:
+          - name: cod_localidade
+            description: chave primária da tabela localidades
+            data_tests:
+              - unique
+              - not_null
       - name: clientes
         description: Tabela fonte de clientes com informações pessoais
+        columns:
+          - name: cod_cliente
+            description: chave primária da tabela clientes
+            data_tests:
+              - unique
+              - not_null
       - name: agencias
         description: Tabela fonte de agencias
+        columns:
+          - name: cod_agencia
+            description: chave primária da tabela agencias
+            data_tests:
+              - unique
+              - not_null
       - name: colaboradores
         description: Tabela fonte de colaboradores com informações pessoais
-        
+        columns:
+          - name: cod_colaborador
+            description: chave primária da tabela colaboradores
+            data_tests:
+              - unique
+              - not_null
